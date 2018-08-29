@@ -15,7 +15,7 @@ Dieses Repository behandelt die Installation von GitHub, VirtualBox, Vagrant und
 
 #### Inhaltsverzeichnis
 
-01 GitHub Account
+01 - GitHub Account
 ======
 
 02 Git Client

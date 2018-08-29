@@ -16,23 +16,23 @@ Dieses Repository behandelt die Installation von GitHub, VirtualBox, Vagrant und
 
 #### Inhaltsverzeichnis
 
-1. GitHub Account
+1.0 GitHub Account
 ======
 
-2. Git Client
+2.0 Git Client
 ======
 
-3. Virtual Box
+3.0 Virtual Box
 ======
 
-4. Vagrant
+4.0 Vagrant
 ======
 
-5. Visual Studio Code
+5.0 Visual Studio Code
 ======
 
-6. Fazit
+6.0 Fazit
 ======
 
-7. Reflexion
+7.0 Reflexion
 ======

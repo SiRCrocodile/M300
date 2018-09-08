@@ -41,6 +41,7 @@ Als erster Schritt muss ein GitHub-Account eingerichtet werden. Dieser dient uns
 Folgende Arbeiten müssen gemacht werden:
 
 Account erstellen
+###
 ***
 1. Auf www.github.com ein Benutzerkonto erstellen (Angabe von Username, E-Mail und Passwort)
 2. E-Mail zur Verifizierung des Kontos bestätigen und anschliessend auf GitHub anmelden

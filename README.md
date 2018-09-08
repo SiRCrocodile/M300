@@ -59,7 +59,12 @@ Folgende Arbeiten müssen gemacht werden:
 
 ### SSH-Key erstellen (lokal)
 ***
-1.  XXX
+1.  Terminal öffnen
+2.  Folgenden Befehl mit der Account-E-Mail von GitHub einfügen
+    ```Shell
+      ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
+    ```
+3. Neuer SSH-Key wird erstellt:
 
 
 ### SSH-Key hinzufügen
@@ -108,22 +113,20 @@ Hierzu müssen folgende Schritte durchgeführt werden:
 ### Übersicht "How to Push"
 ***
 
-Dieser Abschnitt zeigt die Handhabung bzw. der Ablauf von Git-Commands auf, die es zu einem Push des Repositorys benötigt. 
+Dieser Abschnitt zeigt die Handhabung von Git-Befehlen auf. Mit den nachfolgenden Kommandos pusht man das (geänderte) Repository zu seinem GitHub-Repository.
 
-Wichtig: Die Befehle werden im lokalen Repository ausgeführt
+Wichtig: Die Befehle müssen innerhalb des lokalen Repositorys ausgeführt werden!
 
 ```Shell 
-michaels-mbp:~ taco_naco$   cd OneDrive\ -\ TBZ/6.\ Projekte/BIST18b/M300/Repositories/M300/
+$  cd Pfad\zu\meinem\Repository    # Zum lokalen GitHub-Repository wechseln
 
-git status                      # Geänderte Datei(en) werden rot aufgelistet
-git add -a                      # Fügt alle Dateien zum "Upload" hinzu
-git status                      # Der Status ist nun grün > Dateien sind Upload-bereit (Optional) 
-git commit -m "Mein Kommentar"  # Upload wird "commited" > Kommentar zu Dokumentationszwecken ist dafür notwendig
-git status                      # Dateien werden nun als "zum Pushen bereit" angezeigt
-git push                        #Upload bzw. Push wird durchgeführt
+$  git status                      # Geänderte Datei(en) werden rot aufgelistet
+$  git add -a                      # Fügt alle Dateien zum "Upload" hinzu
+$  git status                      # Der Status ist nun grün > Dateien sind Upload-bereit (Optional) 
+$  git commit -m "Mein Kommentar"  # Upload wird "commited" > Kommentar zu Dokumentationszwecken ist dafür notwendig
+$  git status                      # Dateien werden nun als "zum Pushen bereit" angezeigt
+$  git push                        #Upload bzw. Push wird durchgeführt
 ```
-
-
 
 03 VirtualBox
 ======

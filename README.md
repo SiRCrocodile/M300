@@ -48,26 +48,69 @@ Folgende Arbeiten müssen gemacht werden:
 
 ### Repository erstellen
 ***
-1. Innerhalb der Willkommens-Seite auf <strong>Start a project</strong> klicken
-2. Unter <strong>Repoository name</strong> einen Name definieren (z.B. M300)
-3. Optional: kurze Beschreibung eingeben
-4. . Radio-Button bei <strong>Public</strong> belassen
-5. Haken bei <strong>Initialize this repository with a README</strong> setzen
-6. Auf <strong>Crate repository</strong> klicken
+1. Anmelden unter www.github.com 
+2. Innerhalb der Willkommens-Seite auf <strong>Start a project</strong> klicken
+3. Unter <strong>Repoository name</strong> einen Name definieren (z.B. M300)
+4. Optional: kurze Beschreibung eingeben
+5. . Radio-Button bei <strong>Public</strong> belassen
+6. Haken bei <strong>Initialize this repository with a README</strong> setzen
+7. Auf <strong>Crate repository</strong> klicken
    
+
+### SSH-Key erstellen (lokal)
+***
+1.  XXX
+
 
 ### SSH-Key hinzufügen
 ***
-1.  Auf Benutzerkonto klicken (oben rechts) und den Punkt <strong>Settings</strong> aufrufen
-2.  Unter den Menübereichen auf der linken Seite zum Abschnitt <strong>SSH und GPG keys</strong> wechseln
-3.  Auf <strong>New SSH key</strong> klicken
-4.  Im Formular unter <strong>Title</strong> eine Bezeichnung vergeben (z.B. MB SSH-Key)
-5.  Den zuvor kopierten Key mit <i>CTRL + V</i> einfügen und auf <strong>Add SSH key</strong> klicken
-6.  Der Schlüssel (SSH-Key) sollte nun in der übergeordneten Liste auftauchen
+1.  Anmelden unter www.github.com
+2.  Auf Benutzerkonto klicken (oben rechts) und den Punkt <strong>Settings</strong> aufrufen
+3.  Unter den Menübereichen auf der linken Seite zum Abschnitt <strong>SSH und GPG keys</strong> wechseln
+4.  Auf <strong>New SSH key</strong> klicken
+5.  Im Formular unter <strong>Title</strong> eine Bezeichnung vergeben (z.B. MB SSH-Key)
+6.  Den zuvor kopierten Key mit <i>CTRL + V</i> einfügen und auf <strong>Add SSH key</strong> klicken
+7.  Der Schlüssel (SSH-Key) sollte nun in der übergeordneten Liste auftauchen
 
 
 02 Git Client
 ======
+
+Damit die Arbeiten lokal auf dem eigenen PC erfolgen können, muss der sogenannte "Git Client" installiert werden. Dieser ermöglicht uns,
+Cloud-Repositories zu klonen, zu pullen (herunteraden) oder ein lokales Repository zu pushen (hochladen).
+
+Hierzu müssen folgende Schritte durchgeführt werden: 
+
+### Client installieren
+***
+1. XXX
+
+
+### Client konfigurieren
+***
+1. XXX
+
+
+### Repository klonen
+***
+1. XXX
+
+### Repository herunterladen (Pull)
+***
+1.  XXX
+
+
+### Repository hochladen (Push)
+***
+1.  XXX
+
+
+### Übersicht "How to Push"
+***
+1.  XXX
+
+
+
 
 03 VirtualBox
 ======

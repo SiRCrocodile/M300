@@ -45,23 +45,25 @@ Account erstellen
 1. Auf www.github.com ein Benutzerkonto erstellen (Angabe von Username, E-Mail und Passwort)
 2. E-Mail zur Verifizierung des Kontos bestätigen und anschliessend auf GitHub anmelden
 
+
 Repository erstellen
 ***
-3. Innerhalb der Willkommens-Seite auf <strong>Start a project</strong> klicken
-4. Unter <strong>Repoository name</strong> einen Name definieren (z.B. M300)
-5. Optional: kurze Beschreibung eingeben
-6. Radio-Button bei <strong>Public</strong> belassen
-7. Haken bei <strong>Initialize this repository with a README</strong> setzen
-8. Auf <strong>Crate repository</strong> klicken
+1. Innerhalb der Willkommens-Seite auf <strong>Start a project</strong> klicken
+2. Unter <strong>Repoository name</strong> einen Name definieren (z.B. M300)
+3. Optional: kurze Beschreibung eingeben
+4. . Radio-Button bei <strong>Public</strong> belassen
+5. Haken bei <strong>Initialize this repository with a README</strong> setzen
+6. Auf <strong>Crate repository</strong> klicken
    
+
 SSH-Key hinzufügen
 ***
-9.  Auf Benutzerkonto klicken (oben rechts) und den Punkt <strong>Settings</strong> aufrufen
-10. Unter den Menübereichen auf der linken Seite zum Abschnitt <strong>SSH und GPG keys</strong> wechseln
-11. Auf <strong>New SSH key</strong> klicken
-12. Im Formular unter <strong>Title</strong> eine Bezeichnung vergeben (z.B. MB SSH-Key)
-13. Den zuvor kopierten Key mit <i>CTRL + V</i> einfügen und auf <strong>Add SSH key</strong> klicken
-14. Der Schlüssel (SSH-Key) sollte nun in der übergeordneten Liste auftauchen
+1.  Auf Benutzerkonto klicken (oben rechts) und den Punkt <strong>Settings</strong> aufrufen
+2.  Unter den Menübereichen auf der linken Seite zum Abschnitt <strong>SSH und GPG keys</strong> wechseln
+3.  Auf <strong>New SSH key</strong> klicken
+4.  Im Formular unter <strong>Title</strong> eine Bezeichnung vergeben (z.B. MB SSH-Key)
+5.  Den zuvor kopierten Key mit <i>CTRL + V</i> einfügen und auf <strong>Add SSH key</strong> klicken
+6.  Der Schlüssel (SSH-Key) sollte nun in der übergeordneten Liste auftauchen
 
 
 02 Git Client

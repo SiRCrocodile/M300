@@ -40,14 +40,13 @@ Als erster Schritt muss ein GitHub-Account eingerichtet werden. Dieser dient uns
 
 Folgende Arbeiten müssen gemacht werden:
 
-Account erstellen
-###
+### Account erstellen
 ***
 1. Auf www.github.com ein Benutzerkonto erstellen (Angabe von Username, E-Mail und Passwort)
 2. E-Mail zur Verifizierung des Kontos bestätigen und anschliessend auf GitHub anmelden
 
 
-Repository erstellen
+### Repository erstellen
 ***
 1. Innerhalb der Willkommens-Seite auf <strong>Start a project</strong> klicken
 2. Unter <strong>Repoository name</strong> einen Name definieren (z.B. M300)
@@ -57,7 +56,7 @@ Repository erstellen
 6. Auf <strong>Crate repository</strong> klicken
    
 
-SSH-Key hinzufügen
+### SSH-Key hinzufügen
 ***
 1.  Auf Benutzerkonto klicken (oben rechts) und den Punkt <strong>Settings</strong> aufrufen
 2.  Unter den Menübereichen auf der linken Seite zum Abschnitt <strong>SSH und GPG keys</strong> wechseln

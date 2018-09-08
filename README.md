@@ -13,7 +13,7 @@ erarbeitet und zeigt alle Schritte auf, die es zur Einrichtung einer vollständi
 | Datum         | Änderungen                                                | Kürzel  |
 | ------------- |-----------------------------------------------------------| -------:|
 | 29.08.2018    | Erstellung der Datei & erste Änderungen eingeführt        |   MBL   |
-| 08.09.2018    | Einleitung geschrieben                                    |   MBL   |
+| 08.09.2018    | Einleitung, Voraussetzungen, Inhaltsverzeichnis & Kapitel 1 erarbeitet                                    |   MBL   |
 | zebra stripes | are neat                                                  |    $1   |
 
 #### Voraussetzungen

@@ -108,12 +108,14 @@ Hierzu müssen folgende Schritte durchgeführt werden:
 ### Übersicht "How to Push"
 ***
 
-1.  
-2.  
-
 ```Shell 
-git status
-
+git status  #Geänderte Datei(en) werden rot aufgelistet
+git add -a  #Fügt alle Dateien zum "Upload" hinzu
+git status  #(Optional) Der Status ist nun grün > Dateien sind Upload-bereit
+git commit -m "Mein Kommentar" #Upload wird "commited" > Kommentar zu Dokumentationszwecken ist dafür notwendig
+git status  #Dateien werden nun als "zum Pushen bereit" angezeigt
+git push    #Upload bzw. Push wird durchgeführt
+```
 
 
 

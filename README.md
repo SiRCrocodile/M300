@@ -40,8 +40,8 @@ Als erster Schritt muss ein GitHub-Account eingerichtet werden. Dieser dient uns
 
 Folgende Arbeiten müssen gemacht werden:
 
-1. Auf <www.github.com> Benutzerkonto erstellen (Angabe von Username, E-Mail und Passwort)
-2. E-Mail zur Verifizierung des Kontos bestätigen und anmelden
+1. Auf www.github.com ein Benutzerkonto erstellen (Angabe von Username, E-Mail und Passwort)
+2. E-Mail zur Verifizierung des Kontos bestätigen und anschliessend auf GitHub anmelden
 3. Auf Benutzerkonto klicken (oben rechts) und den Punkt <strong>Settings</strong> aufrufen
 4. Unter den Menübereichen auf der linken Seite zum Abschnitt <strong>SSH und GPG keys</strong> wechseln
 5. Auf <strong>New SSH key</strong> klicken

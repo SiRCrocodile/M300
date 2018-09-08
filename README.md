@@ -107,7 +107,12 @@ Hierzu müssen folgende Schritte durchgeführt werden:
 
 ### Übersicht "How to Push"
 ***
-1.  XXX
+
+1.  
+2.  
+
+```Shell 
+git status
 
 
 

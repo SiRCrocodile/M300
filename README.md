@@ -108,13 +108,19 @@ Hierzu müssen folgende Schritte durchgeführt werden:
 ### Übersicht "How to Push"
 ***
 
+Dieser Abschnitt zeigt die Handhabung bzw. der Ablauf von Git-Commands auf, die es zu einem Push des Repositorys benötigt. 
+
+Wichtig: Die Befehle werden im lokalen Repository ausgeführt
+
 ```Shell 
-git status  #Geänderte Datei(en) werden rot aufgelistet
-git add -a  #Fügt alle Dateien zum "Upload" hinzu
-git status  #(Optional) Der Status ist nun grün > Dateien sind Upload-bereit
-git commit -m "Mein Kommentar" #Upload wird "commited" > Kommentar zu Dokumentationszwecken ist dafür notwendig
-git status  #Dateien werden nun als "zum Pushen bereit" angezeigt
-git push    #Upload bzw. Push wird durchgeführt
+michaels-mbp:~ taco_naco$   cd OneDrive\ -\ TBZ/6.\ Projekte/BIST18b/M300/Repositories/M300/
+
+git status                      # Geänderte Datei(en) werden rot aufgelistet
+git add -a                      # Fügt alle Dateien zum "Upload" hinzu
+git status                      # Der Status ist nun grün > Dateien sind Upload-bereit (Optional) 
+git commit -m "Mein Kommentar"  # Upload wird "commited" > Kommentar zu Dokumentationszwecken ist dafür notwendig
+git status                      # Dateien werden nun als "zum Pushen bereit" angezeigt
+git push                        #Upload bzw. Push wird durchgeführt
 ```
 
 

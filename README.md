@@ -17,12 +17,12 @@ erarbeitet und zeigt alle Schritte auf, die es zur Einrichtung einer vollständi
 | 09.09.2018    | Kapitel 2 erarbeitet                                                |    MBL   |
 
 #### Voraussetzungen
-* macOS High Sierra (Version 10.13.6)
-* GitHub Account
-* Git-OSX-Installer (Version 2.15.0)
-* VirtualBox (Version 5.2.18)
-* Vagrant (Version 2.1.4)
-* Visual Studio Code (Version 1.26.1)
+* [X] macOS High Sierra (Version 10.13.6)
+* [X] GitHub Account
+* [X] Git-OSX-Installer (Version 2.15.0)
+* [X] VirtualBox (Version 5.2.18)
+* [X] Vagrant (Version 2.1.4)
+* [X] Visual Studio Code (Version 1.26.1)
 
 #### Inhaltsverzeichnis
 * 01 - GitHub Account
@@ -229,7 +229,7 @@ $  cd Pfad\zu\meinem\Repository    # Zum lokalen GitHub-Repository wechseln
 
 $  git status                      # Geänderte Datei(en) werden rot aufgelistet
 $  git add -a                      # Fügt alle Dateien zum "Upload" hinzu
-$  git status                      # Der Status ist nun grün > Dateien sind Upload-bereit (Optional) 
+$  git status    d                  # Der Status ist nun grün > Dateien sind Upload-bereit (Optional) 
 $  git commit -m "Mein Kommentar"  # Upload wird "commited" > Kommentar zu Dokumentationszwecken ist dafür notwendig
 $  git status                      # Dateien werden nun als "zum Pushen bereit" angezeigt
 $  git push                        #Upload bzw. Push wird durchgeführt
@@ -261,21 +261,52 @@ Für das weitere Vorgehen wird eine System-Abbild-Datei benötigt. Dazu laden wi
 ### VM erstellen
 ***
 1. VirtualBox starten
-2. Links oben, innerhalb der Anwendung, auf "Neu" klicken
+2. Links oben, innerhalb der Anwendung, auf `Neu` klicken
 3. Im neuen Fenster folgende Informationen eintragen:
-   *  Name: `M300_Ubuntu_16.04_Desktop`
-   *  Typ:  `Linux`
-   *  Version:  `Ubuntu (64-bit)`
+   *  Name:           `M300_Ubuntu_16.04_Desktop`
+   *  Typ:            `Linux`
+   *  Version:        `Ubuntu (64-bit)`
    *  Speichergrösse: `2048 MB`
-   *  [X] Festplatte erzeugen
-4. 
-
+   *  Platte:         `[X] Festplatte erzeugen`
+4. Auf `Erzeugen` klicken
+5. Weiteres Fenster öffnet sich, folgende Informationen eintragen:
+   *  Dateipfad:                       standard
+   *  Dateigrösse:                     `10.00 GB`
+   *  Dateityp der Festplatte:         `VMDK (Virtual Maschine Disk)`
+   *  Storage on physical hard disk:   `dynamisch alloziert`
+6. Ebenefalls auf `Erzeugen` klicken, dann im Hauptmenü die VM anwählen (blau markiert) und den Punkt `Ändern` aufrufen
+7. Im Abschnitt `Massenspeicher` den SATA-Controller anwählen und auf das CD+Symbol klicken
+8. Unter `Medium auswählen` das zuvor heruntergeladene Systemabbild (ISO-Datei) anwählen
+9. Alle Änderungen speichern und die VM starten
+10. Den Installationsanweisungen der OS-Installation folgen und anschliessend zu Abschnitt "VM einrichten" gehen
 
 ### VM einrichten
 ***
-1. Auf www.github.com ein Benutzerkonto erstellen (Angabe von Username, E-Mail und Passwort)
-2. E-Mail zur Verifizierung des Kontos bestätigen und anschliessend auf GitHub anmelden
+Die virtuelle Maschine (VM) sollte nun soweit betriebsbereit sein, sprich der Zugriff auf den Home-Desktop ist möglich. 
 
+1. Ubuntu-VM starten
+2. Anmelden und Terminal öffnen
+3. Paketliste neu einlesen und Pakete aktualisieren:
+   ```Shell 
+   $  sudo apt-get update   #Paketlisten des Paketmanagement-Systems "APT" neu einlesem
+   
+   $  sudo apt-get update   #Installierte Pakete wenn möglich auf verbesserte Versionen aktualisieren
+
+   $  sudo reboot           #System-Neustart durchführen
+   ```
+4. Software Controlcenter "Synaptic" installieren:
+   ```Shell 
+   $  sudo apt-get install synaptic
+   ```
+5. Nach erfolgreicher Installation in der Suche nach "Synaptic Package Manager" suchen und diesen starten
+6. Innerhalb des Managers nach "apache" (Webserver-Programm) suchen und dieses (inkl. aller Abhängigkeiten) installieren
+7. System-Neustart durchführen:
+   ```Shell 
+   $  sudo reboot
+   ```
+8. Gängiger Web-Browser (z.B. Firefox) starten und prüfen, ob der Standard-Content des Webservers unter "http://127.0.0.01:80" (localhost) erreichbar ist
+9. Browser-Fenster schliessen und VM wieder herunterfahren/stoppen
+10. Mit dem Kapitel 04 (Vagrant) fortfahren
 
 04 Vagrant
 ======

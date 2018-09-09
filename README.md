@@ -11,10 +11,10 @@ erarbeitet und zeigt alle Schritte auf, die es zur Einrichtung einer vollständi
 #### Revision History
 
 | Datum         | Änderungen                                                | Kürzel  |
-| ------------- |:-----------------------------------------------------------| -------:|
+| ------------- |:-----------------------------------------------------------| :-------:|
 | 29.08.2018    | Erstellung der Datei & erste Änderungen eingeführt        |   MBL   |
 | 08.09.2018    | Einleitung, Voraussetzungen, Inhaltsverzeichnis & Kapitel 1 erarbeitet                                    |   MBL   |
-| 09.09.2018    | Kapitel 2 erarbeitet                                                |    MBL   |
+| 09.09.2018    | Kapitel 2, 3 und 4 erarbeitet                                                |    MBL   |
 
 #### Voraussetzungen
 * [X] macOS High Sierra (Version 10.13.6)
@@ -229,7 +229,7 @@ $  cd Pfad\zu\meinem\Repository    # Zum lokalen GitHub-Repository wechseln
 
 $  git status                      # Geänderte Datei(en) werden rot aufgelistet
 $  git add -a                      # Fügt alle Dateien zum "Upload" hinzu
-$  git status    d                  # Der Status ist nun grün > Dateien sind Upload-bereit (Optional) 
+$  git status                      # Der Status ist nun grün > Dateien sind Upload-bereit (Optional) 
 $  git commit -m "Mein Kommentar"  # Upload wird "commited" > Kommentar zu Dokumentationszwecken ist dafür notwendig
 $  git status                      # Dateien werden nun als "zum Pushen bereit" angezeigt
 $  git push                        #Upload bzw. Push wird durchgeführt
@@ -306,13 +306,176 @@ Die virtuelle Maschine (VM) sollte nun soweit betriebsbereit sein, sprich der Zu
    ```
 8. Gängiger Web-Browser (z.B. Firefox) starten und prüfen, ob der Standard-Content des Webservers unter "http://127.0.0.01:80" (localhost) erreichbar ist
 9. Browser-Fenster schliessen und VM wieder herunterfahren/stoppen
-10. Mit dem Kapitel 04 (Vagrant) fortfahren
+10. Mit dem Kapitel 4 (Vagrant) fortfahren
 
 04 Vagrant
 ======
 
+Kapitel 3 (VirtualBox) sollte uns zeigen, dass das Bereitstellen virtueller Systeme in der konventionellen Art lange dauert und umständlich sein kann.
+Abhilfe bietet hier Vagrant. Vagrant ist eine freie Ruby-Anwendung zur Erstellung und Verwaltung virtueller Maschinen und ermöglicht einfache Softwareverteilung.
+
+Nachfolgend sind einzelne Schritte zur Einrichtung von Vagrant dokumentiert:
+
+### Software herunteladen & installieren
+***
+1. Die Anwendung in der Version 2.1.4 kann auf der [offiziellen Webseite](https://www.vagrantup.com/ "vagrantup.com") heruntergeladen werden.
+2. Die Installation erfolgt, wie alle anderen Anwendungen, GUI-basiert, jedoch standard (ohne speziellen Anpassungen). Daher wird an dieser Stelle ebenfalls auf eine Erklärung verzichtet.
+3. Sobald der Vorgang abgeschlossen wurde, kann mit dem Erstellen einer VM fortgefahren werden. 
+
+
+### Virtuelle Maschine erstellen
+***
+1. Terminal öffnen
+2. In gewünschtem Verzeichnis einen neuen Ordner für die VM anlegen:
+    ```Shell
+      $ cd Wohin\auch\immer
+      $ mkdir MeineVagrantVM
+      $ cd MeineVagrantVM
+    ``` 
+3. Vagrantfile erzeugen, VM erstellen und entsprechend starten:
+    ```Shell
+      $ vagrant init ubuntu/xenial64        #Vagrantfile erzeugen
+      $ vagrant up --provider virtualbox    #Virtuelle Maschine erstellen & starten
+    ``` 
+4. Die VM ist nun in Betrieb (erscheint auch in der Übersicht innerhalb von VirtualBox) und kann via SSH-Zugriff bedient werden:
+    ```Shell
+      $ cd Pfad\zu\meiner\Vagrant-VM      #Zum Verzeichnis der VM wechseln
+      $ vagrant ssh                       #SSH-Verbindung zur VM aufbauen
+
+      #Anschliessend können ganz normale Bash-Befehle abgesetzt werden:
+
+      $ ls -l /bin  #Bin-Verzeichnis anzeigen
+      $ df -h       #Freier Festplattenspeicher
+      $ free -m     #Freier Arbeitsspeicher
+    ``` 
+5. VM über VirtualBox-GUI ausschalten
+
+Schlussfolgerung: Eine VM lässt sich mit Vagrant eindeutig schneller und unkomplizierter erstellen!
+
+
+### Virtuelle Maschine erstellen (mit Vagrant-Box auf Netzwerkshare)
+***
+1. Terminal öffnen
+2. In gewünschtem Verzeichnis einen neuen Ordner für die VM anlegen:
+    ```Shell
+      $ cd Wohin\auch\immer
+      $ mkdir MeineVagrantVM
+      $ cd MeineVagrantVM
+    ``` 
+3. Vagrantfile erzeugen, VM erstellen und entsprechend starten:
+    ```Shell
+      $ vagrant box add http://[HOST]/vagrant/ubuntu/xenial64.box --name ubuntu/xenial64  #Vagrant-Box vom Netzwerkshare hinzufügen
+      $ vagrant init ubuntu/xenial64                                                      #Vagrantfile erzeugen
+      $ vagrant up --provider virtualbox                                                  #Virtuelle Maschine erstellen & starten
+    ``` 
+4. Die VM ist nun in Betrieb (erscheint auch in der Übersicht innerhalb von VirtualBox) und kann via SSH-Zugriff bedient werden:
+    ```Shell
+      $ cd Pfad\zu\meiner\Vagrant-VM      #Zum Verzeichnis der VM wechseln
+      $ vagrant ssh                       #SSH-Verbindung zur VM aufbauen
+
+      #Anschliessend können ganz normale Bash-Befehle abgesetzt werden:
+
+      $ ls -l /bin  #Bin-Verzeichnis anzeigen
+      $ df -h       #Freier Festplattenspeicher
+      $ free -m     #Freier Arbeitsspeicher
+    ``` 
+5. VM über VirtualBox-GUI ausschalten
+
+Schlussfolgerung: Keine erheblichen Unterschiede zum ersten Teil (ohne Share) und daher auch nicht wirklich kompliziert.
+
+### Apache Webserver automatisiert aufsetzen
+***
+Um den Automatisierungsgrad von Vagrant im Rahmen dieser Dokumentation etwas besser hervorzuheben, richten wir eine VM, dass sie direkt mit einem vorinstallierten Apache-Webserver startet. Dazu können wir im Vagrantfile den Code etwas leicht abändern und direkt auf Bash-Ebene mit einfachen Befehlen arbeiten. 
+
+Nachfolgend wird die VM mit einem bereits abgeänderten File bzw. VM aus dem devops-Repository erstellt:
+
+1. Terminal öffnen
+2. In das devops-Verzeichnis (\devops\vagrant\web) wechseln:
+    ```Shell
+      $ cd Pfad\zum\dvops-Verzeichnis\devops\vagrant\web
+    ``` 
+3. VM erstellen und starten:
+    ```Shell
+      $ vagrant up
+    ``` 
+4. Webbrowser öffnen und prüfen, ob der Standard-Content des Webservers unter "http://127.0.0.01:80" (localhost) erreichbar ist
+5. Im Ordner `\web` die Hauptseite `index.html` editieren bzw. durch eine andere ersetzen (z.B. HTML5up-Themplate) und das Resultat überprüfen
+6. Abschliessend kann die VM wieder gelöscht werden:
+    ```Shell
+      $ vagrant destroy -f
+    ```
+7. Vagrant ist nun komplett einsatzfähig!
+
+
 05 Visual Studio Code
 ======
+
+Bis hierhin haben wir soweit alles aufgesetzt und installiert. Nun möchten wir für effizienteres Arbeiten eine "Entwicklungsumgebung" aufbauen, die es uns ermöglicht, alle lokalen Repositories an einem Ort zu verwalten und die dazugehörigen Dateien zu bearbeiten. Die Lösung hierzu ist: Visual Studio Code 
+Dieser freie Quelltext-Editor von Microsoft, ermöglicht uns, unsere Workflows besser zu gestalten und damit die Arbeit um einiges leichter zu machen.
+
+Für die Einrichtung muss man sich nach den nachfolgenden Anweisungen orientieren:
+
+### Software herunteladen & installieren
+***
+1. Unter [dieser Webseite](https://code.visualstudio.com/"visualstudio.com") lässt sich der Installer (Version 1.26.1) herunterladen.
+2. Auf "Download for Mac" klicken und warten, bis das Fenster zum Herunterladen erscheint. Anschliesend den Download des Installers starten
+3. Die Installation erfolgt auch hier GUI-basiert. Wiederum aber standard (ohne speziellen Anpassungen), sodass an dieser Stelle auf eine Erklärung ebenfalls verzichtet wird .
+4. Sobald der Vorgang abgeschlossen wurde, kann mit dem Herunterladen der ISO-Datei und der VM-Erstellung fortgefahren werden.
+
+
+### Extensions installieren
+***
+
+Wir fügen dem Editor drei wichtige Extensions hinzu:
+
+* Markdown All in One (Version 1.6.0 / von Yu Zhang)
+* Vagrant Extension (Version 0.5.0 / von Marco Stanzi)
+* vscode-pdf Extension (Version 0.3.0 / von tomiko1207)
+
+Dazu müssen folgende Anweisungen befolgt werden: 
+
+1. Visual Studio Code öffnen
+2. Die Tastenkombination `CTRL` + `SHIFT` + `X` drücken und in der Sucheleiste die erwähnten Extensions suchen
+3. Auf `Install` klicken und anschliessend auf `Reload`, um die Extension in den Arbeitsbereich zu laden.
+4. Nun können die Extensions angewendet werden. Für Markdown ist [diese Liste](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet/"github.com") sehr hilfreich.
+
+
+### Einstellungen anpassen
+***
+Damit keine Dateien der virtuellen Maschinen dem Cloud-Repository hinzugefügt werden (da Dateien zu gross), müssen diese in den Einstellungen "exkludiert" werden:
+
+1. Visual Studio Code öffnen
+2. Unter `Code` > `Preferences` > `Settings` bei den 3 Punkten (...) auf `Open setting.json` klicken
+3. Zu diesem Abschnitt gehen:
+     ```
+      // Configure glob patterns for excluding files and folders. For example, the files 
+      explorer decides which files and folders to show or hide based on this setting. 
+      Read more about glob patterns here. (...)
+    ``` 
+4. Nachstehenden Code einfügen:
+     ```
+      // Konfiguriert die Globmuster zum Ausschließen von Dateien und Ordnern.
+      "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.vagrant": true,
+        "**/.DS_Store": true
+      },
+    ```
+5. Änderungen speichern und die Einstellungen schliessen
+   
+Nun sollten keine Dateien mit den Endungen .git / .svn / .hg / .vagrant / .DS_store hochgeladen werden. Wie man die Änderungen innerhalb von Visual Studio Code richtig pusht, wird im nachfolgenden Abschnitt erklärt. 
+
+### Repository hinzufügen & pushen
+***
+1. Visual Studio Code öffnen
+2. Änderungen an entsprechenden Dateien des lokalen Repositorys vornehmen
+3. In der linken Leiste das Symbol mit einer "1" aufrufen
+4. Unter dem Abschnitt `Changes` die betroffenen Files bezüglich ihres Changes "stagen" (`Stage Changes`)
+5. Nachricht hinterlegen (`Message`) und Haken (`Commit`) setzen
+6. Bei den 3 Punkten (...) die Funktion `Push` aufrufen
+7. Warten, bis Dateien vollständig gepusht wurden
 
 06 Fazit
 ======

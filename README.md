@@ -60,11 +60,30 @@ Folgende Arbeiten müssen gemacht werden:
 ### SSH-Key erstellen (lokal)
 ***
 1.  Terminal öffnen
-2.  Folgenden Befehl mit der Account-E-Mail von GitHub einfügen
+2.  Folgenden Befehl mit der Account-E-Mail von GitHub einfügen:
     ```Shell
-      ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
+      $  ssh-keygen -t rsa -b 4096 -C "beispiel@beispiel.com"
     ```
 3. Neuer SSH-Key wird erstellt:
+    ```Shell
+      Generating public/private rsa key pair.
+    ```
+4. Bei der Abfrage, unter welchem Namen der Schlüssel gespeichert werden soll, die Enter-Taste drücken (für Standard):
+    ```Shell
+      Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]
+    ```
+5. Nun kann ein Passwort für den Key festgelegt werden. Ich empfehle dieses zu setzen und anschliessend dem SSH-Agent zu hinterlegen, sodass keine erneute Eingabe (z.B. beim Pushen) notwendig ist:
+    ```Shell
+      Enter passphrase (empty for no passphrase): [Passwort]
+      Enter same passphrase again: [Passwort wiederholen]
+    ```
+6. 
+
+
+
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+https://help.github.com/articles/working-with-ssh-key-passphrases/
 
 
 ### SSH-Key hinzufügen

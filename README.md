@@ -14,7 +14,7 @@ erarbeitet und zeigt alle Schritte auf, die es zur Einrichtung einer vollständi
 | ------------- |:-----------------------------------------------------------| -------:|
 | 29.08.2018    | Erstellung der Datei & erste Änderungen eingeführt        |   MBL   |
 | 08.09.2018    | Einleitung, Voraussetzungen, Inhaltsverzeichnis & Kapitel 1 erarbeitet                                    |   MBL   |
-| zebra stripes | are neat                                                  |    $1   |
+| 09.09.2018    | Kapitel 2 erarbeitet                                                |    MBL   |
 
 #### Voraussetzungen
 * macOS High Sierra (Version 10.13.6)
@@ -77,13 +77,34 @@ Folgende Arbeiten müssen gemacht werden:
       Enter passphrase (empty for no passphrase): [Passwort]
       Enter same passphrase again: [Passwort wiederholen]
     ```
-6. 
 
-Test
 
-https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
-
-https://help.github.com/articles/working-with-ssh-key-passphrases/
+### SSH-Key dem SSH-Agent hinzufügen
+***
+1.  Terminal öffnen
+2.  SSH-Agent starten:
+    ```Shell
+      $ eval "$(ssh-agent -s)"
+      Agent pid 931
+    ```
+3.  Ab Version macOS High Sierra 10.12.2 muss das `~/.ssh/config` File angepasst werden, damit SSH-Keys automatisch dem SSH-Agent hinzugefügt werden:
+    ```Shell
+      $ sudo nano ~/.ssh/config
+      
+      Host *
+      AddKeysToAgent yes
+      UseKeychain yes
+      IdentityFile ~/.ssh/id_rsa
+    ```
+4.  Nun muss der Schlüssel dem Agent nur noch hinzugefügt werden:
+    ```Shell
+      $ ssh-add -K ~/.ssh/id_rsa
+    ```
+5.  Der SSH-Key muss nun nur noch kopiert und anschliessend dem GitHub-Account hinzugefüg werden (siehe "SSH-Key hinzufügen"):
+    ```Shell
+      $ pbcopy < ~/.ssh/id_rsa.pub
+      # Kopiert den Inhalt der id_rsa.pub Datei in die Zwischenablage
+    ``` 
 
 
 ### SSH-Key hinzufügen
@@ -97,6 +118,13 @@ https://help.github.com/articles/working-with-ssh-key-passphrases/
 7.  Der Schlüssel (SSH-Key) sollte nun in der übergeordneten Liste auftauchen
 
 
+> Weiter Infos zu SSH-Keys in Zusammenhang mit GitHub und dem SSH-Agent findet man unter:
+
+> **GitHub-Help:**  https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+> **Wikipedia:**    https://en.wikipedia.org/wiki/Ssh-agent
+
+
 02 Git Client
 ======
 
@@ -107,27 +135,87 @@ Hierzu müssen folgende Schritte durchgeführt werden:
 
 ### Client installieren
 ***
-1. XXX
+1. Für die Client-Installation muss der Installer unter [dieser Webseite](http://sourceforge.net/projects/git-osx-installer/ "sourceforge.net/projects/git-osx-installer") heruntergeladen werden (Version 2.15.0)
+2. Die Installation erfolgt GUI-basiert, jedoch standard (ohne speziellen Anpassungen). Daher wird an dieser Stelle auf eine Erklärung verzichtet.
+3. Sobald der Vorgang abgeschlossen wurde, kann mit der Konfiguration fortgefahren werden.
 
 
 ### Client konfigurieren
 ***
-1. XXX
+1. Terminal öffnen
+2. Git konfigurieren mit Informationen des GitHub-Accounts:
+    ```Shell
+      $ git config --global user.name "<username>"
+      $ git config --global user.email "<e-mail>"
+    ``` 
+3. Konfiguration abgeschlossen
 
 
 ### Repository klonen
 ***
-1. XXX
+1. Zu Testzwecken soll ein Repository geklont werden. Dazu sind folgende Befehle notwendig:
+2. Terminal öffnen
+3. Repository klonen: 
+    ```Shell
+      $ git clone https://github.com/mc-b/devops
+    ``` 
+4. In das devops-Verzeichnis wechseln:
+    ```Shell
+      $ cd devops
+    ``` 
+5. Repository aktualisieren und Status anzeigen:
+    ```Shell
+      $ git pull
 
-### Repository herunterladen (Pull)
+      Already up to date.
+
+      $ git status
+
+      Your branch is up to date with 'origin/master'.
+    ``` 
+6. Die Statusmeldung soll dabei mitteilen, dass das lokale Repository mit dem Originalen übereinstimmt.
+
+### Repository herunterladen & aktualisieren (clone/pull)
 ***
-1.  XXX
+1. Terminal öffnen
+2. Ordner für Repository im gewünschten Verzeichnis erstellen:
+    ```Shell
+      $ cd Wohin\auch\immer
+      $ mkdir MeinLokalesRepository
+    ``` 
+3. Repository mit SSH klonen (siehe Webseite des Repositorys unter "Clone or download"):
+    ```Shell
+      $ git clone git@github.com:TacoTaco47/M300.git
 
+      Cloning into 'M300'...
+    ``` 
+4. Repository aktualisieren und Status anzeigen:
+    ```Shell
+      $ git pull
+
+      Already up to date.
+    ```
 
 ### Repository hochladen (Push)
 ***
-1.  XXX
-
+1.  Terminal öffnen (nachdem Teile bzw. Dateien des lokalen Repositorys geändert wurden)
+2.  In das entsprechende Verzeichnis des Repository gehen: 
+    ```Shell
+      $ cd Pfad\zu\meinem\Repository  
+    ```  
+3.  Dateien dem Upload hinzufügen:
+    ```Shell
+      $ git add -a.
+    ``` 
+4.  Den Upload commiten:
+    ```Shell
+      $ git commit -m "Mein Kommentar"
+    ``` 
+5.  Schliesslich den Upload pushen:
+    ```Shell
+      $ git push
+    ```
+6.  Nun sollte der Master-Branch des Repositorys ebenfalls aktualisiert sein
 
 ### Übersicht "How to Push"
 ***

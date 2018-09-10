@@ -10,11 +10,12 @@ erarbeitet und zeigt alle Schritte auf, die es zur Einrichtung einer vollständi
 
 #### Revision History
 
-| Datum         | Änderungen                                                | Kürzel  |
-| ------------- |:-----------------------------------------------------------| :-------:|
-| 29.08.2018    | Erstellung der Datei & erste Änderungen eingeführt        |   MBL   |
-| 08.09.2018    | Einleitung, Voraussetzungen, Inhaltsverzeichnis & Kapitel 1 erarbeitet                                    |   MBL   |
-| 09.09.2018    | Kapitel 2, 3 und 4 erarbeitet                                                |    MBL   |
+| Datum         | Änderungen                                                                         |  Kürzel  |
+| ------------- |:-----------------------------------------------------------------------------------| :------: |
+| 29.08.2018    | Erstellung der Datei & erste Änderungen eingeführt                                 |    MBL   |
+| 08.09.2018    | Einleitung, Voraussetzungen, Inhaltsverzeichnis & Kapitel 1 erarbeitet             |    MBL   |
+| 09.09.2018    | Kapitel 2, 3, 4, 5 und 6 erarbeitet                                                |    MBL   |
+| 10.09.2018    | Kapitel 7 erarbeitet und kleinere Ergänzungen an den anderen Kapitel vorgenommen   |    MBL   |
 
 #### Voraussetzungen
 * [X] macOS High Sierra (Version 10.13.6)
@@ -33,7 +34,7 @@ erarbeitet und zeigt alle Schritte auf, die es zur Einrichtung einer vollständi
 * 06 - Fazit / Reflexion
 * 07 - Quellenverzeichnis
 
-01 - GitHub Account
+![](https://raw.githubusercontent.com/TacoTaco47/M300/master/Artboard%201%400.75x.png "GitHub") 01 - GitHub Account 
 ======
 
 Als erster Schritt muss ein GitHub-Account eingerichtet werden. Dieser dient uns später als "Cloud-Speicher" unserer Dokumentation und weiteren Dateien.
@@ -479,20 +480,34 @@ Nun sollten keine Dateien mit den Endungen .git / .svn / .hg / .vagrant / .DS_st
 
 06 Fazit / Reflexion
 ======
-Mir persönlich hat die Einrichtung der Tool-Umgebung sehr viel Freude bereitet. Besonders das Erarbeiten der Dokumentation fand ich interessant, da ich bis anhin den Funktionsumfang von GitHub in Kombination mit Markdown nicht kannte. Da für mich alles sehr neu war, musste ich mich in einer ersten Phase erst einmal in die einzelnen Bereiche einarbeiten und Schritt für Schritt die Anweisungen befolgen. Grösstenteils hatte ich dabei keine Mühe und ich konnte bereits in geraumer Zeit einen Grossteil der Aufgaben abschliessen. Trotz gelegentlichen unklaren Passagen innerhalb der uns zur Verfügung gestellten «Doku», konnte ich diese Hindernisse überwinden und mein bis jetzt erlangtes Fachwissen voll und ganz einsetzen. Das einzig nennenswerte Problem stellte die Erstellung des SSH-Keys und die anschliessende Verwendung innerhalb der Visual Studio Code Applikation dar. Da ich (trotz Anweisungen) meinen SSH-Key mit einem Passwort schützen wollte – Sicherheit geht vor, hatte ich anschliessend Probleme, wenn ich Änderungen direkt in der Visual Studio Code Umgebung in das Cloud-Repository pushen wollte. In einem Artikel der GitHub-Hilfeseite wird dies jedoch empfohlen und so wurde mir glücklicherweise aufgezeigt, wie man diese Problematik mit dem Hinzufügen des Keys an den SSH-Agent vollständig umgehen kann. Dadurch konnte ich die Umgebung vollständig einrichten und mein Vorgehen entsprechend dokumentieren.
+Mir persönlich hat die Einrichtung der Tool-Umgebung sehr viel Freude bereitet. Besonders das Erarbeiten der Dokumentation fand ich interessant, da ich bis anhin den Funktionsumfang von GitHub in Kombination mit Markdown nicht kannte. Da für mich alles sehr neu war, musste ich mich in einer ersten Phase erst einmal in die einzelnen Bereiche einarbeiten und Schritt für Schritt die Anweisungen befolgen. Grösstenteils hatte ich dabei keine Mühe und ich konnte bereits in geraumer Zeit einen Grossteil der Aufgaben abschliessen. Trotz gelegentlichen unklaren Passagen innerhalb der uns zur Verfügung gestellten [«Doku»](http://iotkit.mc-b.ch/tbz/M300V3/html/10-Installation/"iotkit.mc-b.ch"), konnte ich diese Hindernisse überwinden und mein bis jetzt erlangtes Fachwissen voll und ganz einsetzen. Das einzig nennenswerte Problem stellte die Erstellung des SSH-Keys und die anschliessende Verwendung innerhalb der Visual Studio Code Applikation dar. Da ich (trotz Anweisungen) meinen SSH-Key mit einem Passwort schützen wollte – denn die Sicherheit geht vor(!), hatte ich anschliessend Probleme, wenn ich Änderungen direkt in der Visual Studio Code Umgebung in das Cloud-Repository pushen wollte. In einem Artikel der GitHub-Hilfeseite wird dies jedoch empfohlen und so wurde mir glücklicherweise aufgezeigt, wie man diese Problematik mit dem Hinzufügen des Keys an den SSH-Agent vollständig umgehen kann. Dadurch konnte ich die Umgebung vollständig einrichten und mein Vorgehen entsprechend dokumentieren.
 
 Für zukünftige Arbeiten werde ich GitHub wohl wieder als unterstützende Hilfe bei der Dokumentation von gemachten Arbeiten verwenden, da der Umfang sehr gross ist und auch der visuelle Aspekt meiner Ansicht nach perfekt ist: ordentlich, modern und sauber!
 
 07 Quellenverzeichnis
-======
-
-http://iotkit.mc-b.ch/tbz/
-
-https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-
-https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+====== 
+Die obigen Anleitungen habe ich mit mehreren Quellen erarbeitet und dokumentiert. Das nachfolgende Quellverzeichnis soll Aufschluss über die verwendeten Quellen geben und ein Zeichen der Dankbarkeit und Anerkennung sein.
 
 
-https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+**TBZ Repository Server (Toolumgebung aufsetzen)**
+  <br>
+  * Diese Dokumentation basiert grundsätzlich auf den Grundlagen nachfolgender Anweisungen, die durch die Schule bereitgestellt wurden:
+  <br>
+  http://iotkit.mc-b.ch/tbz/
+
+**GitHub**
+  <br>
+  * Für die Formatierung nahm ich das Markdown-Cheatsheet zur Hilfe:
+  <br>
+  https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+  * Bei Code- und Syntax-Highlighting half mir folgende Übersicht:
+  <br>
+  https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+
+  * Das SSH-Key-Problem löste ich mit folgendem Hilfe-Artikel:
+  <br>
+  https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 
 
+-

@@ -30,8 +30,8 @@ erarbeitet und zeigt alle Schritte auf, die es zur Einrichtung einer vollständi
 * 03 - VirtualBox
 * 04 - Vagrant
 * 05 - Visual Studio Code
-* 06 - Fazit
-* 07 - Reflexion
+* 06 - Fazit / Reflexion
+* 07 - Quellenverzeichnis
 
 01 - GitHub Account
 ======
@@ -472,13 +472,27 @@ Nun sollten keine Dateien mit den Endungen .git / .svn / .hg / .vagrant / .DS_st
 1. Visual Studio Code öffnen
 2. Änderungen an entsprechenden Dateien des lokalen Repositorys vornehmen
 3. In der linken Leiste das Symbol mit einer "1" aufrufen
-4. Unter dem Abschnitt `Changes` die betroffenen Files bezüglich ihres Changes "stagen" (`Stage Changes`)
-5. Nachricht hinterlegen (`Message`) und Haken (`Commit`) setzen
-6. Bei den 3 Punkten (...) die Funktion `Push` aufrufen
+4. Unter dem Abschnitt **Changes** die betroffenen Files bezüglich ihres Changes "stagen" (**Stage Changes**)
+5. Nachricht hinterlegen (**Message**) und Haken (**Commit**) setzen
+6. Bei den 3 Punkten (...) die Funktion **Push** aufrufen
 7. Warten, bis Dateien vollständig gepusht wurden
 
-06 Fazit
+06 Fazit / Reflexion
+======
+Mir persönlich hat die Einrichtung der Tool-Umgebung sehr viel Freude bereitet. Besonders das Erarbeiten der Dokumentation fand ich interessant, da ich bis anhin den Funktionsumfang von GitHub in Kombination mit Markdown nicht kannte. Da für mich alles sehr neu war, musste ich mich in einer ersten Phase erst einmal in die einzelnen Bereiche einarbeiten und Schritt für Schritt die Anweisungen befolgen. Grösstenteils hatte ich dabei keine Mühe und ich konnte bereits in geraumer Zeit einen Grossteil der Aufgaben abschliessen. Trotz gelegentlichen unklaren Passagen innerhalb der uns zur Verfügung gestellten «Doku», konnte ich diese Hindernisse überwinden und mein bis jetzt erlangtes Fachwissen voll und ganz einsetzen. Das einzig nennenswerte Problem stellte die Erstellung des SSH-Keys und die anschliessende Verwendung innerhalb der Visual Studio Code Applikation dar. Da ich (trotz Anweisungen) meinen SSH-Key mit einem Passwort schützen wollte – Sicherheit geht vor, hatte ich anschliessend Probleme, wenn ich Änderungen direkt in der Visual Studio Code Umgebung in das Cloud-Repository pushen wollte. In einem Artikel der GitHub-Hilfeseite wird dies jedoch empfohlen und so wurde mir glücklicherweise aufgezeigt, wie man diese Problematik mit dem Hinzufügen des Keys an den SSH-Agent vollständig umgehen kann. Dadurch konnte ich die Umgebung vollständig einrichten und mein Vorgehen entsprechend dokumentieren.
+
+Für zukünftige Arbeiten werde ich GitHub wohl wieder als unterstützende Hilfe bei der Dokumentation von gemachten Arbeiten verwenden, da der Umfang sehr gross ist und auch der visuelle Aspekt meiner Ansicht nach perfekt ist: ordentlich, modern und sauber!
+
+07 Quellenverzeichnis
 ======
 
-07 Reflexion
-======
+http://iotkit.mc-b.ch/tbz/
+
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+
+
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+

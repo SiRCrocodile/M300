@@ -16,6 +16,8 @@ erarbeitet und zeigt alle Schritte auf, die es zur Einrichtung einer vollständi
 | 08.09.2018    | Einleitung, Voraussetzungen, Inhaltsverzeichnis & Kapitel 1 erarbeitet             |    MBL   |
 | 09.09.2018    | Kapitel 2, 3, 4, 5 und 6 erarbeitet                                                |    MBL   |
 | 10.09.2018    | Kapitel 7 erarbeitet und kleinere Ergänzungen an den anderen Kapitel vorgenommen   |    MBL   |
+| 10.09.2018    | Bilder bzw. Icons eingefügt                                                        |    MBL   |
+|      ...      | ...                                                                                |    ...   |
 
 #### Voraussetzungen
 * [X] macOS High Sierra (Version 10.13.6)
@@ -26,13 +28,13 @@ erarbeitet und zeigt alle Schritte auf, die es zur Einrichtung einer vollständi
 * [X] Visual Studio Code (Version 1.26.1)
 
 #### Inhaltsverzeichnis
-* 01 - GitHub Account
-* 02 - Git Client
-* 03 - VirtualBox
-* 04 - Vagrant
-* 05 - Visual Studio Code
-* 06 - Fazit / Reflexion
-* 07 - Quellenverzeichnis
+* 01 - [GitHub Account](https://github.com/TacoTaco47/M300#-01---github-account)
+* 02 - [Git Client](https://github.com/TacoTaco47/M300#--02---git-client)
+* 03 - [VirtualBox](https://github.com/TacoTaco47/M300#--03---virtualbox)
+* 04 - [Vagrant](https://github.com/TacoTaco47/M300#--04---vagrant)
+* 05 - [Visual Studio Code](https://github.com/TacoTaco47/M300#-05---visual-studio-code)
+* 06 - [Fazit / Reflexion](https://github.com/TacoTaco47/M300#-06---fazit--reflexion)
+* 07 - [Quellenverzeichnis](https://github.com/TacoTaco47/M300#-07---quellenverzeichnis)
 
 ![](https://raw.githubusercontent.com/TacoTaco47/M300/master/GitHub_36x36.png "GitHub") 01 - GitHub Account 
 ======
@@ -490,20 +492,12 @@ Die obigen Anleitungen habe ich mit mehreren Quellen erarbeitet und dokumentiert
 
 **TBZ Repository Server (Toolumgebung aufsetzen)**
   <br>
-  * Diese Dokumentation basiert grundsätzlich auf den Grundlagen nachfolgender Anweisungen, die durch die Schule bereitgestellt wurden:
-  <br>
-  http://iotkit.mc-b.ch/tbz/
+  * Diese Dokumentation basiert grundsätzlich auf den Grundlagen nachfolgender Anweisungen, die durch die Schule bereitgestellt wurden: http://iotkit.mc-b.ch/tbz/
 
 **GitHub**
   <br>
-  * Für die Formatierung nahm ich das Markdown-Cheatsheet zur Hilfe:
-  <br>
-  https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+  * Für die Formatierung nahm ich das Markdown-Cheatsheet zur Hilfe: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
-  * Bei Code- und Syntax-Highlighting half mir folgende Übersicht:
-  <br>
-  https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+  * Bei Code- und Syntax-Highlighting half mir folgende Übersicht: https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
 
-  * Das SSH-Key-Problem löste ich mit folgendem Hilfe-Artikel:
-  <br>
-  https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+  * Das SSH-Key-Problem löste ich mit folgendem Hilfe-Artikel: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/

@@ -1,7 +1,7 @@
 M300 - LB1 Dokumentation
 ======
 
-Dieses Repository behandelt die Installation von GitHub, VirtualBox, Vagrant und Visual Studio Code.
+Dieses Repository behandelt die Installation von GitHub, VirtualBox, Vagrant und Visual Studio Code. Test!
 
 #### Einleitung
 

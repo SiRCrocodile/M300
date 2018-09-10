@@ -36,6 +36,8 @@ erarbeitet und zeigt alle Schritte auf, die es zur Einrichtung einer vollständi
 * 06 - [Fazit / Reflexion](https://github.com/TacoTaco47/M300#-06---fazit--reflexion)
 * 07 - [Quellenverzeichnis](https://github.com/TacoTaco47/M300#-07---quellenverzeichnis)
 
+___
+
 ![](https://raw.githubusercontent.com/TacoTaco47/M300/master/GitHub_36x36.png "GitHub") 01 - GitHub Account 
 ======
 
@@ -517,3 +519,6 @@ Die obigen Anleitungen habe ich mit mehreren Quellen erarbeitet und dokumentiert
   * Bei Code- und Syntax-Highlighting half mir folgende Übersicht: https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
 
   * Das SSH-Key-Problem löste ich mit folgendem Hilfe-Artikel: https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+
+___

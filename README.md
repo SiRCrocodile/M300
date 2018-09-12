@@ -57,11 +57,11 @@ Folgende Arbeiten müssen gemacht werden:
 ***
 1. Anmelden unter www.github.com 
 2. Innerhalb der Willkommens-Seite auf <strong>Start a project</strong> klicken
-3. Unter <strong>Repoository name</strong> einen Name definieren (z.B. M300)
+3. Unter <strong>Repository name</strong> einen Name definieren (z.B. M300)
 4. Optional: kurze Beschreibung eingeben
-5. . Radio-Button bei <strong>Public</strong> belassen
+5. Radio-Button bei <strong>Public</strong> belassen
 6. Haken bei <strong>Initialize this repository with a README</strong> setzen
-7. Auf <strong>Crate repository</strong> klicken
+7. Auf <strong>Create repository</strong> klicken
    
 
 ### SSH-Key erstellen (lokal)

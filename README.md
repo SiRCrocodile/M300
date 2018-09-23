@@ -501,7 +501,7 @@ Mir persönlich hat die Einrichtung der Tool-Umgebung sehr viel Freude bereitet.
 
 Für zukünftige Arbeiten werde ich GitHub wohl wieder als unterstützende Hilfe bei der Dokumentation von gemachten Arbeiten verwenden, da der Umfang sehr gross ist und auch der visuelle Aspekt meiner Ansicht nach perfekt ist: ordentlich, modern und sauber!
 
-![](https://raw.githubusercontent.com/TacoTaco47/M300/master/Magnifier_36x36.png "Fazit / Reflexion") 07 - Quellenverzeichnis
+![](https://raw.githubusercontent.com/TacoTaco47/M300/master/Magnifier_36x36.png "Quellenverzeichnis") 07 - Quellenverzeichnis
 ====== 
 
 > [⇧ **Nach oben**](https://github.com/TacoTaco47/M300#m300---lb1-dokumentation)

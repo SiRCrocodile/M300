@@ -1,6 +1,9 @@
 M300 - Dokumentation
 ======
 
+
+![M300-Banner](https://raw.githubusercontent.com/TacoNaco47/M300/master/images/Banner_M300_GitHub-Repository.png)
+
 Dies ist das Home-Repository für die Dokumentation von Michael Blickenstorfer im Modul M300.
 
 #### Einleitung

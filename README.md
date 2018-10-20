@@ -14,6 +14,8 @@ Im Allgemeinen geht es um die Integration plattformüberbreifender Dienste in ei
 
 Der Unterricht durch Hr. Boxhammer und Hr. Rengel fokussiert auf das Zusammenspiel zwischen GitHub (oder GitLab), Git, Markdown Language (MDL), Virtual Box, Vagrant und Docker. Es geht primär um die Dynamisierung und Containerisierung von IT-Infrastrukturen, welche mittels Virtualisierungstechnologien wie Vagrant und Docker vorrangetrieben werden.
 
+Los geht's mit dem Einrichten der Toolumgebung ⇒ [KLICK-MICH](https://github.com/TacoNaco47/M300)
+
 ___
 #### Inhaltsverzeichnis
 * 01 - [Home](https://github.com/TacoNaco47/M300)
@@ -30,7 +32,7 @@ ___
 
 
 #### Voraussetzungen
-Für die Durchführung aller Aufgaben sind folgende Installationen zwingend erforderlich:
+**Wichtig** | Für die Durchführung aller Aufgaben sind folgende Installationen zwingend erforderlich:
 
 * [X] macOS High Sierra (Version 10.13.6)
 * [X] GitHub Account

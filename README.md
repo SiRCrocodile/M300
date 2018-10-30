@@ -41,7 +41,8 @@ ___
 * [X] Vagrant (Version 2.1.4)
 * [X] Visual Studio Code (Version 1.26.1)
 
-___
+<br>
+
 ___
 #### Revision History
 
@@ -49,6 +50,7 @@ ___
 | ------------- |:-----------------------------------------------------------------------------------| :------: |
 | 26.08.2018    | Inhaltsverzeichnis und weitere Abschnitte erstellt                                 |    MBL   |
 | 20.10.2018    | Verlinkungen erstellt                                                              |    MBL   |
+| 30.10.2018    | Kleine Änderungen vorgenommen                                                      |    MBL   |
 |      ...      | ...                                                                                |    ...   |
 
 

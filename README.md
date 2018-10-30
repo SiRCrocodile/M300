@@ -6,7 +6,7 @@ M300 - Dokumentation
 
 Dies ist das Home-Repository für die Dokumentation von Michael Blickenstorfer im Modul M300.
 
-#### Einleitung
+### Einleitung
 
 Die nachstehende Dokumentation wurde von Michael Blickenstorfer im Rahmen des Moduls M300 (Plattformübergreifende Dienste in ein Netzwerk integrieren) erarbeitet und führt zu den weiteren Repositories bzw. Dokumentationen, die für dieses Modul erstellt wurden.
 
@@ -17,7 +17,7 @@ Der Unterricht durch Hr. Boxhammer und Hr. Rengel fokussiert auf das Zusammenspi
 Los geht's mit dem Einrichten der Toolumgebung ⇒ [KLICK-MICH](https://github.com/TacoNaco47/M300_10_Toolumgebung)
 
 ___
-#### Inhaltsverzeichnis
+### Inhaltsverzeichnis
 * 01 - [Home](https://github.com/TacoNaco47/M300)
 * 02 - [10 - Toolumgebung](https://github.com/TacoNaco47/M300_10_Toolumgebung)
 * 03 - [20 - Prototyping](https://github.com/TacoNaco47/M300_20_Prototyping)
@@ -31,8 +31,9 @@ ___
 ___
 
 
-#### Voraussetzungen
-**Wichtig** | Für die Durchführung aller Aufgaben sind folgende Installationen zwingend erforderlich:
+### Voraussetzungen
+
+**Wichtig:** Für die Durchführung aller Aufgaben sind folgende Installationen zwingend erforderlich:
 
 * [X] macOS High Sierra (Version 10.13.6)
 * [X] GitHub Account
